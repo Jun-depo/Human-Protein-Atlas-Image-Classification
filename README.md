@@ -8,3 +8,4 @@
  
   Iniatial data analysis showed that there are many examples of proteins localized at nucleoplasm, cytosol, plasma membrane, nucleoli, mitochondria, golgi apparatus and nuclear bodies.  Very few examples of proteins localized at aggresome,         mitotic spindle, lipid droplets, peroxisomes, endosomes, lysosomes, microtubule ends, rods & rings as shown inthe figure below)
   
+![alt text](https://github.com/Jun-depo/Human-Protein-Atlas-Image-Classification/blob/master/count1.png)
