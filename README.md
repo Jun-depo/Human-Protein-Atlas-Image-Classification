@@ -15,7 +15,7 @@ I oversampled underrepresented class training examples (2-7 times of original si
 
 ### Data Generator.
 
-Total amount of image data is more than system could handle, I used data generator to retrieve and feed image data in batches, I used the tutorial (https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly) as my reference for my data generator.   
+Total amount of image data is more than system could handle, I used data generator to retrieve and feed image data in batches, I used the tutorial (https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly) as the main reference for the data generator.   
 
 ### Image augmentation and cropping.
 
