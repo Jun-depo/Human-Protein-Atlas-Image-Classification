@@ -19,7 +19,7 @@ Total amount of image data is more than system could handle, I used data generat
 
 ### Image augmentation and cropping.
 
-In the data generator, I added a random choice of image augmentations from 4 different rotations (0, 90°, 180°, 270°), vertical or horizontal flipping. I only had one GTX 1080 ti, training large number of images at 512X512 was very slow and unstable. I used image cropping instead reducing image size. 
+In the data generator, I added a random choice of image augmentations from 4 different rotations (0, 90°, 180°, 270°), vertical or horizontal flipping. I only had one GTX 1080 ti, training large number of images at 512X512 was very slow and unstable. I used random image cropping instead reducing image size. 
 
 ### External data
 
