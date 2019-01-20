@@ -10,13 +10,16 @@
   
 ![alt text](https://github.com/Jun-depo/Human-Protein-Atlas-Image-Classification/blob/master/count1.png)
 
+### Over sampling underrepresented class examples
+I oversampled underrepresented class training examples (2-7 times of original size based the classes) to offset a bit of unbalanced sample distribution. 
+
 ### Data Generator.
 
-Total amount of image data is more than system could handle, I used data generator to retrieve and feed image data in batches, I used the tutorial (https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly) and code  as my reference for my data generator.   
+Total amount of image data is more than system could handle, I used data generator to retrieve and feed image data in batches, I used the tutorial (https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly) as my reference for my data generator.   
 
 ### Image augmentation and cropping.
 
-In the data generator, I added a random choice of image augmentations from 4 different rotations (0, 90°, 180°, 270°), vertical or horizontal flipping. I only had one GTX 1080 ti, training large number of images at 512X512 was very slow. I used image cropping instead reducing resolution. 
+In the data generator, I added a random choice of image augmentations from 4 different rotations (0, 90°, 180°, 270°), vertical or horizontal flipping. I only had one GTX 1080 ti, training large number of images at 512X512 was very slow and unstable. I used image cropping instead reducing image size. 
 
 ### External data
 
@@ -26,14 +29,11 @@ Beside official Kaggle training, additional data were available from https://www
 
 Since each images can have more than one labels.  I can't use softmax function for highest probabilty class.  I used binary classification for each of 28 labels to predict whether the image contains that label.
 
-I used single model method for the classification.  I tried InceptionResNetV2 and ResNet50. InceptionResNetV2 worked better under the my testing condition, I preceeded with InceptionResNetV2. I initially used pretrained InceptionResNetV2 model which I could only fed 3 image channels. I switched to non pretrained model, that allowed me to feed all 4 channnels of image data. 
+I used single model method for the classification.  I tried InceptionResNetV2 and ResNet50. InceptionResNetV2 worked better under the my limited testing condition, I preceeded with InceptionResNetV2. I initially used pretrained InceptionResNetV2 model which I could only fed 3 image channels. I switched to non pretrained model, that allowed me to feed all 4 channnels of image data. 
 
 ### Protein localization label inference in the test data.
 
 For each image, I classified labels for 8 random crops, took max probabilty for each label out of 8 crops. Initially, I calculated mean probabilty for 8 random crops.  Then, I thought certain crops might contain more information for label classification. I didn't have time to test which method was better for the classification.  
 
 I got external data one day before the closure of the competition.  I could only train 12 epochs with extra data (I loaded my previously trained weights. I run about 12 more epochs after the competition, did get better results.   
-
-
-
 
