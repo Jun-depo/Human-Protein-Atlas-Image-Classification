@@ -27,13 +27,13 @@ Beside official Kaggle training, additional data were available from https://www
 
 ### The image classification model. 
 
-Since each images can have more than one labels.  I can't use softmax function for highest probabilty class.  I used binary classification for each of 28 labels to predict whether the image contains that label.
+Since each images can have more than one label.  I can't use softmax function for highest probabilty class.  I used binary classification for each of 28 labels to predict whether the image contains that label.
 
 I used single model method for the classification.  I tried InceptionResNetV2 and ResNet50. InceptionResNetV2 worked better under the my limited testing condition, I preceeded with InceptionResNetV2. I initially used pretrained InceptionResNetV2 model which I could only fed 3 image channels. I switched to non pretrained model, that allowed me to feed all 4 channnels of image data. 
 
 ### Protein localization label inference in the test data.
 
-For each image, I classified labels for 8 random crops, took max probabilty for each label out of 8 crops. Initially, I calculated mean probabilty for 8 random crops.  Then, I thought certain crops might contain more information for label classification. I didn't have time to test which method was better for the classification.  
+For each image, I classified labels for 8 random crops, took max probabilty for each label out of 8 crops. Initially, I calculated mean probabilty for 8 random crops.  Then, I thought certain crops might contain more information for label classification. I didn't have time to test which method (mean or max) was better for the classification.  
 
-I got external data one day before the closure of the competition.  I could only train 12 epochs with extra data (I loaded my previously trained weights. I run about 12 more epochs after the competition, did get better results.   
+I got external data one day before the completion of the competition.  I could only train 12 epochs with extra external data (I loaded the previously self-trained weights with official train data). I run about 12 more epochs post the competition, did get better results.   
 
