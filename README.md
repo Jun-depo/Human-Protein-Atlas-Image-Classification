@@ -37,3 +37,8 @@ I classified labels for each images with 8 random crops of that image, then took
 
 I got external data one day before the completion of the competition.  I could only train 12 epochs with extra external data (I loaded the previously self-trained weights without extra external data). I run about 12 more epochs post the competition, and got better results than my official submission.   
 
+### Script links.
+#### Data Visualization:  
+https://github.com/Jun-depo/Human-Protein-Atlas-Image-Classification/blob/master/Protein_Image_Classification_Visualization.ipynb
+#### Image Classification:
+https://github.com/Jun-depo/Human-Protein-Atlas-Image-Classification/blob/master/protein_subcellular_localization_classification.ipynb
