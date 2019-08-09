@@ -25,11 +25,11 @@ In the data generator, I added a random choice of image augmentations from 4 dif
 
 Beside official Kaggle train data, additional data were available from https://www.proteinatlas.org/. I used some ideas from the discussion forum to get and process external data,  https://www.kaggle.com/c/human-protein-atlas-image-classification/discussion/69984#430860.  High resolution images were reduced to 512X512 pixels, identical to the size of official training images. 
 
-### The image classification model. 
+### The image classification method. 
 
-Since each image can have more than one label.  I can't use softmax function for highest probabilty class.  I used binary classification for each of 28 labels to predict whether the image contains that label.
+Since each image can have more than one label.  Softmax function couldn't be used for the highest probabilty class.  Binary classification on each of 28 labels were used to predict whether the image contains each of the labels.
 
-I used single model method for the classification.  I tried InceptionResNetV2 and ResNet50. InceptionResNetV2 worked better under my limited testing, I preceeded with InceptionResNetV2. I initially used pretrained InceptionResNetV2 model which I could only input 3 image channels. I switched to non pretrained model, that allowed me to feed all 4 channnels of image data. 
+Single model method were used for the classification.  I tried InceptionResNetV2 and ResNet50. InceptionResNetV2 worked better under my  primary testing, I preceeded with InceptionResNetV2. I initially used pretrained InceptionResNetV2 model which I could only input 3 image channels. I switched to non pretrained model, that allowed me to feed all 4 channnels of image data. 
 
 ### Protein localization label prediction in the test data.
 
