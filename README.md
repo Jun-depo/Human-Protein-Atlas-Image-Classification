@@ -3,10 +3,10 @@
 
 ### Introduction
 
-  Different proteins are localized at different locations inside the cell. Target protein localization patterns are labeled by antibodies that is revealed in the green channel of images, along with microtubules (red), endoplasmatic reticulum (yellow) and nuclei (blue).  Based on lables of the training set, classification models need to learn to distinguish 28 different protein localization patterns.  Each protein can be localized at multiple cellular locations, carring multiple labels.  
+  Different proteins are localized at different locations inside the cell. Protein localization patterns are labeled by antibodies that is revealed in the green channel of images, along with microtubules (red), endoplasmatic reticulum (yellow) and nuclei (blue).  Based on lables of the training set, classification models need to learn to distinguish 28 different protein localization patterns.  Each protein can be localized at multiple subcellular locations, carring multiple labels.  
  (Link:  https://www.kaggle.com/c/human-protein-atlas-image-classification)
  
-  Iniatial data analysis showed that there are many examples of proteins localized at nucleoplasm, cytosol, plasma membrane, nucleoli, mitochondria, golgi apparatus and nuclear bodies.  Very few examples of proteins localized at aggresome,         mitotic spindle, lipid droplets, peroxisomes, endosomes, lysosomes, microtubule ends, rods & rings as shown in the figure below. 
+  Iniatial data analysis showed that there are many examples of proteins localized at nucleoplasm, cytosol, plasma membrane, nucleoli, mitochondria, golgi apparatus and nuclear bodies.  Very few examples of proteins localized at aggresome, mitotic spindle, lipid droplets, peroxisomes, endosomes, lysosomes, microtubule ends, rods & rings as shown in the figure below. 
   
 ![alt text](https://github.com/Jun-depo/Human-Protein-Atlas-Image-Classification/blob/master/count1.png)
 
@@ -19,7 +19,7 @@ Total amount of image data is more than system could handle, I used data generat
 
 ### Image augmentation and cropping.
 
-In the data generator, I added a random choice of image augmentations from 4 different rotations (0, 90°, 180°, 270°), vertical or horizontal flipping. I only had one GTX 1080 ti, training large number of images at 512X512 was very slow and unstable. I used random image crop of 255X255 pixels instead downsizing images (random crop reference: https://pytorch.org/tutorials/beginner/data_loading_tutorial.html). 
+In the data generator, I added a random choice of image augmentations from 4 different rotations (0, 90°, 180°, 270°), vertical or horizontal flipping. I only had one GTX 1080 ti, training large number of images at 512X512 was very slow and unstable. I used random image crop of 255X255 pixels instead downsizing images. 
 
 ### External data
 
