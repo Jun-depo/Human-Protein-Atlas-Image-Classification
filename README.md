@@ -3,15 +3,15 @@
 
 ### Introduction
 
-  Different proteins are localized at different locations inside the cell. Protein localization patterns are detected and revealed in the green channel of images, along with microtubules (red), endoplasmatic reticulum (yellow) and nuclei (blue).  Based on lables of the training set, classification models need to learn to distinguish 28 different protein localization patterns.  Each protein can be localized at multiple subcellular locations, carring multiple labels.  
+  Different proteins are localized at different locations inside the cell. Protein localization patterns are detected and revealed by antibody stainings shown in the green channel of images, along with microtubules (red), endoplasmatic reticulum (yellow) and nuclei (blue) stainings.  Based on labels of the training set, classification models need to learn to distinguish 28 different protein localization patterns.  Each protein can be localized at multiple subcellular locations, carrying multiple labels.  
  (Link:  https://www.kaggle.com/c/human-protein-atlas-image-classification)
  
-  Iniatial data analysis showed that there are many examples of proteins localized at nucleoplasm, cytosol, plasma membrane, nucleoli, mitochondria, golgi apparatus and nuclear bodies.  Very few examples have their proteins localized at aggresome, mitotic spindle, lipid droplets, peroxisomes, endosomes, lysosomes, microtubule ends, rods & rings as shown in the figure below. 
+  Iniatial data analysis showed that there are many examples of proteins localized at nucleoplasm, cytosol, plasma membrane, nucleoli, mitochondria, golgi apparatus and nuclear bodies.  Very few examples of proteins localized at aggresome, mitotic spindle, lipid droplets, peroxisomes, endosomes, lysosomes, microtubule ends, rods & rings as shown in the figure below. 
   
 ![alt text](https://github.com/Jun-depo/Human-Protein-Atlas-Image-Classification/blob/master/count1.png)
 
 ### Over sampling underrepresented class examples
-I oversampled underrepresented class training examples through multiplication of existing samples (2-7 times of original samples depending on the classes) to somewhat offset unbalanced sample distribution of different labels within the dataset.  
+I oversampled underrepresented classes in training dataset through multiplication of existing samples (2-7 times of original samples depending on the classes) that partially offset unbalanced sample distribution.  
 
 ### Data Generator.
 
