@@ -19,11 +19,11 @@ Total amount of image data is larger than the system memory, data generator was 
 
 ### Image augmentation and cropping.
 
-In the data generator, I added a random choice of image augmentations from 4 different rotations (0, 90°, 180°, 270°), vertical or horizontal flipping. I only had one GTX 1080 ti, training large number of images at 512X512 was very slow and unstable. I used random image crop of 255X255 pixels instead downsizing images. 
+In the data generator, I added a random choice of image augmentations from 4 different rotations (0, 90°, 180°, 270°), vertical or horizontal flipping. I only used one GTX 1080 ti, training large numbers of images at 512X512 was very slow and unstable. I random selected an image crop of 255X255 pixels for each image sample instead of downsizing images. 
 
 ### External data
 
-Beside official Kaggle train data, additional data were available from https://www.proteinatlas.org/. I used some ideas from the discussion forum to get and process external data,  https://www.kaggle.com/c/human-protein-atlas-image-classification/discussion/69984#430860.  High resolution images were reduced to 512X512 pixels, identical to the size of official training images. 
+Beside official Kaggle train data, additional data were available from https://www.proteinatlas.org/. I followed some ideas from the [discussion forum](https://www.kaggle.com/c/human-protein-atlas-image-classification/discussion/69984#430860) to obtain and process external data. High resolution images were down-sampled to 512X512 pixels, to match the image size of official training samples. 
 
 ### The image classification method. 
 
